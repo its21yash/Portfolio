@@ -1,13 +1,10 @@
 import React from "react";
-import Typical from "react-typical";
+import { TypeAnimation } from "react-type-animation";
 import styles from "./Profile.module.css";
 
 const Profile = () => {
   const handleHireMe = () => {
     const phoneNumber = "918607698362";
-
-    // Open the phone dialer with the provided number
-    // window.location.href = `tel:${phoneNumber}`;
 
     window.location.href = `https://wa.me/${phoneNumber}`;
   };
@@ -21,7 +18,7 @@ const Profile = () => {
               <a href="mailto:yash38709@gmail.com">
                 <i className="fa fa-envelope"></i>
               </a>
-              <a href="https://github.com/yash2026">
+              <a href="https://github.com/its21yash">
                 <i className="fa fa-github"></i>
               </a>
               <a href="https://www.facebook.com/profile.php?id=100034343543101">
@@ -48,10 +45,9 @@ const Profile = () => {
               {" "}
               <h1 className={styles.typical}>
                 {" "}
-                <Typical
-                  loop={Infinity}
-                  steps={[
-                    "Python Enthusiast ",
+                <TypeAnimation
+                  sequence={[
+                    "Python Enthusiast",
                     1000,
                     "Enthusiastic Dev 😎",
                     1000,
@@ -64,6 +60,9 @@ const Profile = () => {
                     "React Dev 🌐",
                     1000,
                   ]}
+                  wrapper="span"
+                  speed={50}
+                  repeat={Infinity}
                 />
               </h1>
               <span className={styles["profile-role-tagline"]}>
